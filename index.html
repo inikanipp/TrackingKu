@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="src/output.css" />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Document</title>
+  </head>
+  <body class="px-3 py-1 flex flex-col min-h-screen gap-4 bg-[#F0F1EC]">
+    <nav
+      class="flex justify-center items-center bg-[#066A68] p-3 gap-2 rounded-lg">
+      <img src="assets/note1.svg" alt="" class="w-[1.2rem]" />
+      <h1 class="text-white poppins-semibold">TrackingKu.</h1>
+    </nav>
+
+    <main class="grid grid-cols-2 grid-rows-[20%_1fr] flex-1 gap-4">
+      <!-- start left cell -->
+      <div class="total-pengeluaran bg-white rounded-lg p-2 flex flex-col">
+        <h1
+          class="poppins-medium text-[0.8rem] p-2 bg-[#FFCA46] rounded-lg text-center">
+          Total Pengeluaran
+        </h1>
+        <h1 id="totalPengeluaran"
+          class="flex-1 flex justify-center items-center poppins-medium text-[1.3rem]">
+          Rp.100.000
+        </h1>
+      </div>
+      <!-- end left cell -->
+
+      <!-- start right cell -->
+      <div class="total-data bg-white rounded-lg p-2 flex flex-col">
+        <h1 
+          class="poppins-medium text-[0.8rem] p-2 bg-[#FFCA46] rounded-lg text-center">
+          Total Data
+        </h1>
+        <h1 id="totalData"
+          class="flex-1 flex justify-center items-center poppins-medium text-[1.3rem]">
+          324
+        </h1>
+      </div>
+      <!-- end right cell -->
+
+      <!-- start bottom -->
+      <div
+        class="history-pengeluaran col-span-2 bg-white rounded-lg p-2 flex flex-col gap-3">
+        <!-- start header -->
+        <h1
+          class="poppins-medium text-[0.8rem] p-2 bg-[#FFCA46] rounded-lg text-center">
+          Histori Pengeluaran
+        </h1>
+
+        <!-- <div
+          class="draft flex justify-between items-center min-w-full bg-white p-2 rounded-lg poppins-medium text-[0.8rem]">
+          <h1>Makan Bakso</h1>
+          <h1>Rp.10.000</h1>
+          <button id="trash"><img src="assets/trash.svg" alt="" width="20rem" data-index=""></button>
+        </div> -->
+        <!-- end header -->
+      </div>
+      <!-- end bottom -->
+
+      <button id="addDataNew"
+        class="p-4 bg-[#066A68] absolute z-50 bottom-4 right-5 text-5xl rounded-4xl">
+        <img src="assets/add.svg" alt="" />
+      </button>
+    </main>
+
+
+    <!-- start form  -->
+    <div id="bg"
+      class="bg bg-black/80 absolute min-w-full min-h-full top-0 left-0 p-5 hidden justify-center items-start pt-40">
+      <form
+        action="" id="formData"
+        class="bg-white rounded-lg min-h-60 flex flex-col items-start p-5 gap-5 min-w-80">
+        <h1
+          class="poppins-medium text-[0.8rem] p-2 px-4 bg-[#FFCA46] rounded-lg text-center">
+          Histori Pengeluaran
+        </h1>
+        <input id="judulInput" type="text" class="bg-white rounded-lg min-w-full min-h-8 px-4 py-1 poppins-medium text-[0.7rem] outline-none" placeholder="judul" />
+        <input id="pengeluaranInput" type="number" class="bg-white rounded-lg min-w-full min-h-8 px-4 py-1 poppins-medium text-[0.7rem]" placeholder="pengeluaran" />
+        <input type="submit" class="py-1 rounded-lg px-10 bg-[#FFCA46] text-[0.8rem]" />
+      </form>
+    </div>
+    <!-- end form -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
